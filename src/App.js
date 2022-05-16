@@ -8,7 +8,7 @@ import mars from "./spaceMars2.jpg"
 function App() {
 
   const server = `https://api.nasa.gov/mars-photos/api/v1/rovers/`;
-  const apiKey = 'v64EeXSUbWqkaadVq4Bh1aGwfLBBKNRW2aXiDb9a';
+  const apiKey = process.env.REACT_APP_MARS_API_KEY;
 
   const[sol, setSol] = useState();
   const[images, setImages] = useState([""]);
