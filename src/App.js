@@ -26,7 +26,6 @@ function App() {
       response.json()
     )
     .then(pics => {
-      console.log(pics)
       setImages(pics.photos)
       setData(true)
 
