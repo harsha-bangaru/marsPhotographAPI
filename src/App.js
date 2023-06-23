@@ -45,7 +45,8 @@ function App() {
         setStartDate(stuff.photo_manifest.landing_date)
         setEndDate(stuff.photo_manifest.max_date)
       })
-      .then((error) => console.log(error));
+      .then((error) => {console.log(error)
+      setData(false)});
   };
 
   const handleSelect = (e) => {
@@ -105,7 +106,7 @@ function App() {
         {data ? (
           <RoverCard roverData={roverData}/>
         ) : (
-          <div style={{backgroundColor: "black", color: "white", height: "500px"}}>
+          <div style={{backgroundColor: "black", color: "white"}}>
             no rover data
           </div>
         )}
@@ -125,7 +126,7 @@ function App() {
           ))
         ) : (
           <div style={{backgroundColor: "black", color: "black"}}>
-            {" "}No data to display{" "}
+            {" "}No data to display on this {sol}{" "}
           </div>
         )}
       </div>
