@@ -121,12 +121,12 @@ function App() {
         }}
       >
         {data ? (
-          images.slice(0, 25).map((picture) => (
+          images.slice(0, data.length).map((picture) => (
             <PictureCard picture={picture}/>
           ))
         ) : (
           <div style={{backgroundColor: "black", color: "black"}}>
-            {" "}No data to display on this {sol}{" "}
+            {" "}No data to display on sol {sol}{" "}
           </div>
         )}
       </div>
